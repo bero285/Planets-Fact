@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function PlanetBar({ info, detail }: { info: string, detail: string }) {
 
@@ -11,9 +11,10 @@ function PlanetBar({ info, detail }: { info: string, detail: string }) {
        lg:gap-3'>
       <h3 className='text-[hsl(240,6%,54%)] text-xs font-spartan lg:text-sm
        font-semibold'>{info}</h3>
-      <h1 className='text-white text-xl font-antonio lg:text-3xl'>{detail}</h1>
+      <h1 className='text-white text-xl font-antonio lg:text-3xl'>
+        {detail}</h1>
     </div>
   )
 }
 
-export default PlanetBar
+export default PlanetBar;

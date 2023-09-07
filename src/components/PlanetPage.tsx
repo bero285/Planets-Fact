@@ -66,9 +66,9 @@ function PlanetPage() {
 
       {/* Planets start here */}
       <div className='flex justify-center flex-col items-center
-       md:mt-20 lg:flex-row lg:justify-center  lg:pb-14 lg:mt-24'>
+       lg:flex-row lg:justify-center  lg:pb-14 lg:mt-24'>
 
-        <div className='h-96 flex justify-center items-center lg:w-[60%]'>
+        <div className='h-96 flex justify-center items-center lg:h-auto lg:w-[60%]'>
           <AnimatePresence mode='wait' >
             <motion.div
               key={planet}
@@ -87,11 +87,11 @@ function PlanetPage() {
                 className='flex justify-center items-center'>
                 <img src={text === "overview" || text === "surface"
                   ? myPlanet?.Img : myPlanet?.Int} className='pointer-events-none
-                  w-[50%]  md:w-[60%] lg:w-auto relative ' />
+                  w-[50%]  md:w-[60%] lg:w-auto relative lg:max-h-[550px]' />
                 {text === "surface" &&
                   <img src={myPlanet?.Surf}
                     className='pointer-events-none w-24 md:w-32
-                       absolute mt-52 md:mt-64 lg:bottom-4 lg:w-40 ' />
+                       absolute mt-52 md:mt-64 lg:mt-[430px] lg:w-40 ' />
                 }
               </motion.div>
             </motion.div>
@@ -120,7 +120,7 @@ function PlanetPage() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 50 }}
                   transition={{ duration: 0.7 }}
-
+                  className='flex justify-center md:justify-normal lg:justify-normal'
                 >
                   <p className='leading-6 text-[hsla(0,0%,100%,0.75)]
                    font-spartan text-[13px] text-center w-11/12 max-w-[600px]

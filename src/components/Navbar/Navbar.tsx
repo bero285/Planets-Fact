@@ -15,7 +15,7 @@ function Navbar() {
     { name: "URANUS", color: "cyan", del: 0.7 },
     { name: "NEPTUNE", color: "DodgerBlue", del: 0.8 }]
   const [show, setShow] = useState(false)
-  const { planet, setPlanet } = useContext(MyContext)
+  const {  setPlanet } = useContext(MyContext)
   const [watch, setWatch] = useState(0)
   useEffect(() => {
     setWatch(() => Math.random())

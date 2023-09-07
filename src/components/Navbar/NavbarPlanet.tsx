@@ -17,7 +17,7 @@ function NavbarPlanet({ name, color }: { name: string, color: string }) {
       hover:text-white
       font-spartan text-sm font-semibold
        ${planet === name ? "text-white" : "text-[hsla(0,0%,100%,0.75)]"}
-             lg:${planet === name ? "border-t-4" : null}
+             ${planet === name ? "lg:border-t-4" : null}
                lg:h-full lg:flex lg:items-center hover:lg:border-t-4
                transition-all duration-300
                `}
