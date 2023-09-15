@@ -78,22 +78,24 @@ function PlanetPage() {
               transition={{ duration: 0.7 }}
               className='flex justify-center items-center'
             >
-              <motion.div
-                key={text}
-                initial={{ scale: 0, rotate: -180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                exit={{ scale: 0, rotate: 180 }}
-                transition={{ duration: 1 }}
-                className='flex justify-center items-center'>
-                <img src={text === "overview" || text === "surface"
-                  ? myPlanet?.Img : myPlanet?.Int} className='pointer-events-none
+              <AnimatePresence mode='wait' >
+                <motion.div
+                  key={text}
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  exit={{ scale: 0, rotate: 180 }}
+                  transition={{ duration: 0.7 }}
+                  className='flex justify-center items-center'>
+                  <img src={text === "overview" || text === "surface"
+                    ? myPlanet?.Img : myPlanet?.Int} className='pointer-events-none
                   w-[50%]  md:w-[60%] lg:w-auto relative lg:max-h-[550px]' />
-                {text === "surface" &&
-                  <img src={myPlanet?.Surf}
-                    className='pointer-events-none w-24 md:w-32
+                  {text === "surface" &&
+                    <img src={myPlanet?.Surf}
+                      className='pointer-events-none w-24 md:w-32
                        absolute mt-52 md:mt-64 lg:mt-[430px] lg:w-40 ' />
-                }
-              </motion.div>
+                  }
+                </motion.div>
+              </AnimatePresence>
             </motion.div>
           </AnimatePresence>
         </div>

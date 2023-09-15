@@ -6,16 +6,16 @@ import NavbarPlanet from './NavbarPlanet'
 import { motion, AnimatePresence } from "framer-motion";
 function Navbar() {
   const planetArray = [
-    { name: "MERCURY", color: "white", del: 0.1 },
-    { name: "VENUS", color: "BurlyWood", del: 0.2 },
-    { name: "EARTH", color: "RoyalBlue", del: 0.3 },
-    { name: "MARS", color: "DarkOrange", del: 0.4 },
-    { name: "JUPITER", color: "orange", del: 0.5 },
-    { name: "SATURN", color: "yellow", del: 0.6 },
-    { name: "URANUS", color: "cyan", del: 0.7 },
-    { name: "NEPTUNE", color: "DodgerBlue", del: 0.8 }]
+    { name: "MERCURY", color: "white", del: 0.01 },
+    { name: "VENUS", color: "BurlyWood", del: 0.05 },
+    { name: "EARTH", color: "RoyalBlue", del: 0.10 },
+    { name: "MARS", color: "DarkOrange", del: 0.15 },
+    { name: "JUPITER", color: "orange", del: 0.20 },
+    { name: "SATURN", color: "yellow", del: 0.25 },
+    { name: "URANUS", color: "cyan", del: 0.30 },
+    { name: "NEPTUNE", color: "DodgerBlue", del: 0.35 }]
   const [show, setShow] = useState(false)
-  const {  setPlanet } = useContext(MyContext)
+  const { setPlanet } = useContext(MyContext)
   const [watch, setWatch] = useState(0)
   useEffect(() => {
     setWatch(() => Math.random())
